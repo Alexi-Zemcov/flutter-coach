@@ -65,6 +65,7 @@
 | 3.12 | Overlay, OverlayEntry, CompositedTransformFollower                     | 0     | —     | —    |         |
 | 3.13 | Platform channels: MethodChannel, EventChannel, BasicMessageChannel    | 0     | —     | —    |         |
 | 3.14 | Жизненный цикл приложения: AppLifecycleState, WidgetsBindingObserver   | 0     | —     | —    |         |
+| 3.15 | Переиспользуемые и расширяемые UI-компоненты: композиция, параметризация | 0     | —     | —    |         |
 
 
 ---
@@ -92,13 +93,14 @@
 | --- | ---------------------------------------------------------- | ----- | ----- | ---- | ------- |
 | 5.1 | Clean Architecture: слои, boundaries, data flow            | 0     | —     | —    |         |
 | 5.2 | MVVM в контексте Flutter                                   | 0     | —     | —    |         |
-| 5.3 | Repository pattern                                         | 0     | —     | —    |         |
-| 5.4 | UseCase / Interactor                                       | 0     | —     | —    |         |
-| 5.5 | Feature-first vs Layer-first организация проекта           | 0     | —     | —    |         |
-| 5.6 | Dependency Injection: get_it, injectable, ручной DI        | 0     | —     | —    |         |
-| 5.7 | SOLID в контексте Flutter/Dart                             | 0     | —     | —    |         |
-| 5.8 | Модульность: package-based architecture, mono-repo (Melos) | 0     | —     | —    |         |
-| 5.9 | Управление техническим долгом и рефакторинг                | 0     | —     | —    |         |
+| 5.3 | MVC, Layered architecture — когда уместны в Flutter        | 0     | —     | —    |         |
+| 5.4 | Repository pattern                                         | 0     | —     | —    |         |
+| 5.5 | UseCase / Interactor                                       | 0     | —     | —    |         |
+| 5.6 | Feature-first vs Layer-first организация проекта           | 0     | —     | —    |         |
+| 5.7 | Dependency Injection: get_it, injectable, ручной DI        | 0     | —     | —    |         |
+| 5.8 | SOLID в контексте Flutter/Dart                             | 0     | —     | —    |         |
+| 5.9 | Модульность: package-based architecture, mono-repo (Melos) | 0     | —     | —    |         |
+| 5.10 | Управление техническим долгом и рефакторинг                | 0     | —     | —    |         |
 
 
 ---
@@ -110,7 +112,7 @@
 | --- | ------------------------------------------------------------------ | ----- | ----- | ---- | ------- |
 | 6.1 | Navigator 1.0: push, pop, named routes, onGenerateRoute            | 0     | —     | —    |         |
 | 6.2 | Navigator 2.0 / Router API: RouterDelegate, RouteInformationParser | 0     | —     | —    |         |
-| 6.3 | GoRouter: конфигурация, guards, deep links, nested navigation      | 0     | —     | —    |         |
+| 6.3 | AutoRouter: конфигурация, guards, deep links, nested navigation    | 0     | —     | —    |         |
 | 6.4 | Deep linking: настройка Android/iOS, Universal Links               | 0     | —     | —    |         |
 | 6.5 | Передача данных между экранами, result от pop                      | 0     | —     | —    |         |
 
@@ -176,11 +178,12 @@
 | #    | Тема                                                                | count | score | last | заметки |
 | ---- | ------------------------------------------------------------------- | ----- | ----- | ---- | ------- |
 | 10.1 | Flavors / environments: dev, staging, prod (dart-define, flavorizr) | 0     | —     | —    |         |
-| 10.2 | CI/CD: GitHub Actions / GitLab CI / Codemagic для Flutter           | 0     | —     | —    |         |
+| 10.2 | CI/CD: GitHub Actions, GitLab CI, Bitrise, Codemagic для Flutter    | 0     | —     | —    |         |
 | 10.3 | Code signing: Android (keystore) и iOS (provisioning profiles)      | 0     | —     | —    |         |
 | 10.4 | Публикация: App Store / Google Play процесс и требования            | 0     | —     | —    |         |
 | 10.5 | OTA-обновления: Shorebird, CodePush-аналоги                         | 0     | —     | —    |         |
 | 10.6 | Crashlytics, Sentry — мониторинг ошибок в продакшене                | 0     | —     | —    |         |
+| 10.7 | Ограничения и политики App Store / Google Play                      | 0     | —     | —    |         |
 
 
 ---
@@ -192,8 +195,9 @@
 | ---- | -------------------------------------------------------- | ----- | ----- | ---- | ------- |
 | 11.1 | Git flow: feature-ветки, rebase vs merge, squash         | 0     | —     | —    |         |
 | 11.2 | Разрешение конфликтов, cherry-pick, bisect               | 0     | —     | —    |         |
-| 11.3 | Code review: на что обращать внимание, как давать фидбек | 0     | —     | —    |         |
+| 11.3 | Code review: на что обращать внимание, как давать и принимать обратную связь | 0     | —     | —    |         |
 | 11.4 | Атомарные коммиты, conventional commits                  | 0     | —     | —    |         |
+| 11.5 | Дисциплина в коде и документации: оформление, doc comments, README | 0     | —     | —    |         |
 
 
 ---
@@ -239,6 +243,9 @@
 | 14.3 | Менторинг: как обучать и давать обратную связь                | 0     | —     | —    |         |
 | 14.4 | Взаимодействие с backend/дизайном/продуктом                   | 0     | —     | —    |         |
 | 14.5 | Технические презентации и ADR (Architecture Decision Records) | 0     | —     | —    |         |
+| 14.6 | Участие в проектировании приложения целиком (не только экраны) | 0     | —     | —    |         |
+| 14.7 | Ответственность за качество и стабильность приложения         | 0     | —     | —    |         |
+| 14.8 | Ориентированность на долгосрочную поддержку и развитие продукта | 0     | —     | —    |         |
 
 
 ---
@@ -250,18 +257,16 @@
 | --------------------- | ------- | ------------------- | ------------- | ---------------- |
 | 1. Dart               | 10      | 0                   | —             | —                |
 | 2. Асинхронность      | 9       | 0                   | —             | —                |
-| 3. Flutter ядро       | 14      | 0                   | —             | —                |
+| 3. Flutter ядро       | 15      | 0                   | —             | —                |
 | 4. State Management   | 7       | 0                   | —             | —                |
-| 5. Архитектура        | 9       | 0                   | —             | —                |
+| 5. Архитектура        | 10      | 0                   | —             | —                |
 | 6. Навигация          | 5       | 0                   | —             | —                |
 | 7. Сеть и данные      | 9       | 0                   | —             | —                |
 | 8. Тестирование       | 8       | 0                   | —             | —                |
 | 9. Производительность | 9       | 0                   | —             | —                |
-| 10. CI/CD             | 6       | 0                   | —             | —                |
-| 11. Git               | 4       | 0                   | —             | —                |
+| 10. CI/CD             | 7       | 0                   | —             | —                |
+| 11. Git               | 5       | 0                   | —             | —                |
 | 12. Платформы         | 6       | 0                   | —             | —                |
 | 13. UI/UX             | 7       | 0                   | —             | —                |
-| 14. Soft skills       | 5       | 0                   | —             | —                |
-| **ИТОГО**             | **108** | **0**               | **—**         | **—**            |
-
-
+| 14. Soft skills       | 8       | 0                   | —             | —                |
+| **ИТОГО**             | **115** | **0**               | **—**         | **—**            |
