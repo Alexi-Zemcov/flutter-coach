@@ -14,8 +14,8 @@
 
 | #    | Тема                                                             | count | score | last | заметки |
 | ---- | ---------------------------------------------------------------- | ----- | ----- | ---- | ------- |
-| 1.1  | Система типов Dart (sound null safety, type inference, generics) | 0     | —     | —    |         |
-| 1.2  | Классы: abstract, mixin, extension, sealed, interface            | 0     | —     | —    |         |
+| 1.1  | Система типов Dart (sound null safety, type inference, generics) | 1     | 3     | 2026-03-04 | null safety ок, type promotion — пробел |
+| 1.2  | Классы: abstract, mixin, extension, sealed, interface            | 1     | 4     | 2026-03-04 | sealed vs abstract — уверенно |
 | 1.3  | Records и Patterns (Dart 3+)                                     | 0     | —     | —    |         |
 | 1.4  | Коллекции (List, Map, Set), Iterable, spread, collection-if/for  | 0     | —     | —    |         |
 | 1.5  | Замыкания, функции первого класса, typedef                       | 0     | —     | —    |         |
@@ -33,13 +33,13 @@
 
 | #   | Тема                                                        | count | score | last | заметки |
 | --- | ----------------------------------------------------------- | ----- | ----- | ---- | ------- |
-| 2.1 | Event loop в Dart (microtask queue vs event queue)          | 0     | —     | —    |         |
+| 2.1 | Event loop в Dart (microtask queue vs event queue)          | 1     | 1     | 2026-03-04 | не знал, разобрали |
 | 2.2 | Future: создание, chaining, error handling, Future.wait/any | 0     | —     | —    |         |
 | 2.3 | async/await: под капотом, отличия от callback               | 0     | —     | —    |         |
 | 2.4 | Stream: single-subscription vs broadcast, StreamController  | 0     | —     | —    |         |
 | 2.5 | Stream transformers: map, where, expand, asyncMap, debounce | 0     | —     | —    |         |
-| 2.6 | Isolates: spawn, compute(), SendPort/ReceivePort            | 0     | —     | —    |         |
-| 2.7 | Когда использовать Isolate vs Future vs Stream              | 0     | —     | —    |         |
+| 2.6 | Isolates: spawn, compute(), SendPort/ReceivePort            | 1     | 3     | 2026-03-04 | суть понимает, детали размыты (лимиты) |
+| 2.7 | Когда использовать Isolate vs Future vs Stream              | 1     | 3     | 2026-03-04 | общее понимание есть |
 | 2.8 | Completer, StreamSink, StreamSubscription — управление      | 0     | —     | —    |         |
 | 2.9 | Таймауты, повторные запросы, отмена операций                | 0     | —     | —    |         |
 
@@ -51,7 +51,7 @@
 
 | #    | Тема                                                                   | count | score | last | заметки |
 | ---- | ---------------------------------------------------------------------- | ----- | ----- | ---- | ------- |
-| 3.1  | Три дерева: Widget / Element / RenderObject                            | 0     | —     | —    |         |
+| 3.1  | Три дерева: Widget / Element / RenderObject                            | 1     | 2     | 2026-03-04 | Widget=конфиг ок, Element/RenderObject размыто |
 | 3.2  | StatelessWidget vs StatefulWidget: жизненный цикл                      | 0     | —     | —    |         |
 | 3.3  | Жизненный цикл State: initState, didChangeDependencies, dispose и т.д. | 0     | —     | —    |         |
 | 3.4  | Keys: ValueKey, ObjectKey, GlobalKey — зачем нужны                     | 0     | —     | —    |         |
@@ -160,7 +160,7 @@
 | #   | Тема                                                              | count | score | last | заметки |
 | --- | ----------------------------------------------------------------- | ----- | ----- | ---- | ------- |
 | 9.1 | Build → Layout → Paint pipeline, когда что перезапускается        | 0     | —     | —    |         |
-| 9.2 | const constructors, const widgets — зачем                         | 0     | —     | —    |         |
+| 9.2 | const constructors, const widgets — зачем                         | 1     | 4     | 2026-03-04 | один экземпляр в памяти, пропуск rebuild — верно |
 | 9.3 | RepaintBoundary: как и когда использовать                         | 0     | —     | —    |         |
 | 9.4 | ListView.builder vs ListView, ленивая загрузка                    | 0     | —     | —    |         |
 | 9.5 | Оптимизация изображений: кеш, resize, precache                    | 0     | —     | —    |         |
@@ -255,18 +255,18 @@
 
 | Категория             | Тем     | Обсуждено (count>0) | Средний score | Слабые (score<3) |
 | --------------------- | ------- | ------------------- | ------------- | ---------------- |
-| 1. Dart               | 10      | 0                   | —             | —                |
-| 2. Асинхронность      | 9       | 0                   | —             | —                |
-| 3. Flutter ядро       | 15      | 0                   | —             | —                |
+| 1. Dart               | 10      | 2                   | 3.5           | 0                |
+| 2. Асинхронность      | 9       | 3                   | 2.3           | 1                |
+| 3. Flutter ядро       | 15      | 1                   | 2.0           | 1                |
 | 4. State Management   | 7       | 0                   | —             | —                |
 | 5. Архитектура        | 10      | 0                   | —             | —                |
 | 6. Навигация          | 5       | 0                   | —             | —                |
 | 7. Сеть и данные      | 9       | 0                   | —             | —                |
 | 8. Тестирование       | 8       | 0                   | —             | —                |
-| 9. Производительность | 9       | 0                   | —             | —                |
+| 9. Производительность | 9       | 1                   | 4.0           | 0                |
 | 10. CI/CD             | 7       | 0                   | —             | —                |
 | 11. Git               | 5       | 0                   | —             | —                |
 | 12. Платформы         | 6       | 0                   | —             | —                |
 | 13. UI/UX             | 7       | 0                   | —             | —                |
 | 14. Soft skills       | 8       | 0                   | —             | —                |
-| **ИТОГО**             | **115** | **0**               | **—**         | **—**            |
+| **ИТОГО**             | **115** | **7**               | **2.9**       | **2**            |
