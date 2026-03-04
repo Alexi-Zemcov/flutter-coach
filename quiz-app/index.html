@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter Quiz — Senior Developer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- START SCREEN -->
+    <div id="startScreen" class="start-screen">
+      <h1>Flutter Quiz</h1>
+      <p class="subtitle">Подготовка к собеседованию на Senior Developer</p>
+
+      <div class="category-select">
+        <label for="categoryFilter">Категория:</label>
+        <select id="categoryFilter">
+          <option value="all">Все категории (30 вопросов)</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" onclick="startQuiz()">Начать</button>
+      <button class="btn btn-secondary" onclick="showStats()" style="margin-top: 12px;">Статистика</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quizScreen" class="hidden">
+      <div class="quiz-header">
+        <button type="button" class="btn btn-exit" onclick="showStart()" title="На главный экран">← Выйти</button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="question-meta">
+        <span class="category-badge" id="qCategory"></span>
+        <span id="qCounter"></span>
+      </div>
+
+      <div class="question-text" id="qText"></div>
+
+      <div class="options" id="qOptions"></div>
+
+      <div class="explanation" id="qExplanation"></div>
+
+      <div class="next-btn-wrap" id="nextWrap">
+        <button class="btn btn-primary" onclick="nextQuestion()">Далее</button>
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div id="resultsScreen" class="results hidden">
+      <h1>Результаты</h1>
+
+      <div class="score-circle" id="scoreCircle">
+        <div class="score-number" id="scoreNumber"></div>
+        <div class="score-label" id="scoreLabel"></div>
+      </div>
+
+      <div class="total-stats" id="totalStats"></div>
+
+      <div class="category-results" id="categoryResults"></div>
+
+      <div class="results-actions">
+        <button class="btn btn-secondary" onclick="startQuiz()">Пройти заново</button>
+        <button class="btn btn-secondary" onclick="showStart()">Выбрать категорию</button>
+      </div>
+    </div>
+
+    <!-- STATS SCREEN -->
+    <div id="statsScreen" class="hidden">
+      <h1>Статистика</h1>
+      <p class="subtitle">Прогресс по категориям за всё время</p>
+
+      <div class="stats-summary" id="statsSummary">
+        <div class="stats-card">
+          <div class="stats-card-value" id="statsTotal">0</div>
+          <div class="stats-card-label">Всего ответов</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-card-value" id="statsCorrect">0%</div>
+          <div class="stats-card-label">Правильных</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-card-value" id="statsCoverage">0/117</div>
+          <div class="stats-card-label">Вопросов пройдено</div>
+        </div>
+      </div>
+
+      <div class="stats-bars" id="statsBars"></div>
+
+      <div class="stats-actions">
+        <button class="btn btn-secondary" onclick="showStart()">Назад</button>
+        <button class="btn btn-danger" onclick="clearStats()">Сбросить статистику</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

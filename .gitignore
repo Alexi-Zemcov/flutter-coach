@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+
+# Local / IDE (user-specific paths and settings)
+.claude/settings.local.json
+
+# Dependencies
+node_modules/
+
+# Build output (Vite)
+dist/
+.vite/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+/.idea/
