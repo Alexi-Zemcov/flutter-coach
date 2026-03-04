@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { initApp } from "./app/index.js";
+import { composeScreens } from "./html/composeScreens.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -24,4 +26,5 @@ window.firebaseApp = app;
 window.firebaseAnalytics = analytics;
 
 // Load quiz app (must run after Firebase init)
-import("./app.js");
+composeScreens();
+initApp();
