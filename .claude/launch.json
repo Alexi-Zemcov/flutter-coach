@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "quiz-app",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080", "-d", "quiz-app"],
-      "port": 8080
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--host"],
+      "port": 5173,
+      "cwd": "quiz-app"
     }
   ]
 }
