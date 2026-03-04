@@ -1,0 +1,37 @@
+<div id="homeScreen" class="screen">
+  <header class="home-header">
+    <h1 class="home-title">Flutter <span class="accent">Quiz</span></h1>
+  </header>
+
+  <div class="hero-card">
+    <div class="hero-image">
+      <img src="assets/dashatars.png" alt="Flutter Birds">
+    </div>
+    <div class="hero-counters">
+      <div class="hero-counter">
+        <span class="counter-value"><span id="counterQuestions">0</span> / <span id="counterQuestionsTotal">117</span></span>
+        <div class="counter-bar"><div class="counter-bar-fill" id="barQuestions"></div></div>
+        <span class="counter-label">Вопросы</span>
+      </div>
+      <div class="hero-counter">
+        <span class="counter-value"><span id="counterTickets">0</span> / <span id="counterTicketsTotal">6</span></span>
+        <div class="counter-bar"><div class="counter-bar-fill" id="barTickets"></div></div>
+        <span class="counter-label">Билеты</span>
+      </div>
+      <div class="hero-counter">
+        <span class="counter-value"><span id="counterTopics">0</span> / <span id="counterTopicsTotal">14</span></span>
+        <div class="counter-bar"><div class="counter-bar-fill" id="barTopics"></div></div>
+        <span class="counter-label">Темы</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-grid">
+    <button class="nav-btn nav-btn-blue" data-action="showTicketsScreen">Билеты</button>
+    <button class="nav-btn nav-btn-red" data-action="startBlitz">Блиц</button>
+    <button class="nav-btn nav-btn-dark" data-action="showTopicsScreen"><span class="nav-icon">&#128214;</span> Темы</button>
+    <button class="nav-btn nav-btn-dark" data-action="showMarathonScreen"><span class="nav-icon">&#9201;</span> Марафон</button>
+    <button class="nav-btn nav-btn-dark" data-action="showErrorsScreen"><span class="nav-icon">&#9888;&#65039;</span> Ошибки</button>
+    <button class="nav-btn nav-btn-dark" data-action="showFavoritesScreen"><span class="nav-icon">&#11088;</span> Избранное</button>
+  </div>
+</div>

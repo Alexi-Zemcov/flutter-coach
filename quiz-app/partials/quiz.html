@@ -1,0 +1,28 @@
+<div id="quizScreen" class="screen hidden">
+  <header class="quiz-header-bar">
+    <button class="back-btn" id="quizBackBtn" data-action="openExitModal">&#8592;</button>
+    <div class="quiz-header-title" id="quizHeaderTitle"></div>
+    <div class="quiz-timer" id="quizTimer"></div>
+  </header>
+
+  <div class="question-strip" id="questionStrip"></div>
+
+  <div class="question-text" id="qText"></div>
+
+  <div class="options" id="qOptions"></div>
+
+  <div class="favorite-toggle" id="favoriteToggle" data-action="toggleFavorite">
+    <span class="fav-icon">&#9734;</span>
+    <span class="fav-text">ДОБАВИТЬ В ИЗБРАННОЕ</span>
+  </div>
+
+  <div class="explanation" id="qExplanation">
+    <h4>Комментарий</h4>
+    <p class="explanation-correct" id="explanationCorrect"></p>
+    <p class="explanation-text" id="explanationText"></p>
+  </div>
+
+  <div class="next-btn-wrap" id="nextWrap">
+    <button class="btn btn-primary btn-full" data-action="nextQuestion">СЛЕДУЮЩИЙ ВОПРОС</button>
+  </div>
+</div>
