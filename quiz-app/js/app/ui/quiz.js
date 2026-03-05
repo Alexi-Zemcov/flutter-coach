@@ -101,7 +101,7 @@ export function renderQuestion() {
     quiz.options.appendChild(btn);
   });
 
-  quiz.explanation.classList.toggle("visible", alreadyAnswered && !state.answers[state.currentIndex]?.correct);
+  quiz.explanation.classList.toggle("visible", alreadyAnswered);
   quiz.nextWrap.classList.toggle("visible", alreadyAnswered);
 
   const nextBtn =

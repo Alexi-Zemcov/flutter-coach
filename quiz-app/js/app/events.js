@@ -1,3 +1,4 @@
+import { getDom } from "./dom.js";
 import {
   showErrorsScreen,
   showFavoritesScreen,
@@ -5,7 +6,9 @@ import {
   showMarathonScreen,
   showTicketsScreen,
   showTopicsScreen,
+  showScreen,
 } from "./navigation.js";
+import { state } from "./state.js";
 import {
   closeExitModal,
   confirmExit,
@@ -23,7 +26,7 @@ import {
   startTopicQuiz,
   toggleCurrentFavorite,
 } from "./quiz/flow.js";
-import { goToQuestion } from "./ui/quiz.js";
+import { goToQuestion, renderQuestion, renderQuestionStrip } from "./ui/quiz.js";
 
 const ACTION_HANDLERS = {
   showHome,
@@ -55,6 +58,33 @@ const ACTION_HANDLERS = {
   },
 };
 
+function onPopState() {
+  if (state.exitingQuiz) {
+    state.exitingQuiz = false;
+    return;
+  }
+  const { screens, modals } = getDom();
+  const isQuizVisible = !screens.quizScreen.classList.contains("hidden");
+  const isResultsVisible = !screens.resultsScreen.classList.contains("hidden");
+  const isExitModalOpen = !modals.exitModal.classList.contains("hidden");
+
+  if (isExitModalOpen) {
+    closeExitModal();
+    history.pushState({ screen: "quiz" }, "", location.href);
+    return;
+  }
+  if (isQuizVisible) {
+    openExitModal();
+    history.pushState({ screen: "quiz" }, "", location.href);
+    return;
+  }
+  if (isResultsVisible && history.state?.screen === "quiz") {
+    showScreen("quizScreen");
+    renderQuestionStrip();
+    renderQuestion();
+  }
+}
+
 export function bindGlobalEvents() {
   document.addEventListener("click", (event) => {
     const target = event.target.closest("[data-action]");
@@ -67,5 +97,8 @@ export function bindGlobalEvents() {
       return;
     }
     handler(target, event);
+  });
+  window.addEventListener("popstate", (event) => {
+    onPopState(event);
   });
 }

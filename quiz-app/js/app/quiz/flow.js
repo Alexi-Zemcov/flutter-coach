@@ -71,6 +71,7 @@ export function confirmResume() {
     const firstUnanswered = state.answers.findIndex((a) => a === null);
     state.currentIndex = firstUnanswered !== -1 ? firstUnanswered : state.answers.length - 1;
     showScreen("quizScreen");
+    history.pushState({ screen: "quiz" }, "", location.href);
     renderQuestionStrip();
     renderQuestion();
   } else {
@@ -139,6 +140,7 @@ function beginQuiz() {
   state.currentIndex = 0;
   state.answers = new Array(state.currentQuestions.length).fill(null);
   showScreen("quizScreen");
+  history.pushState({ screen: "quiz" }, "", location.href);
   renderQuestionStrip();
   renderQuestion();
 }
@@ -238,13 +240,16 @@ export function closeExitModal() {
 export function confirmExit() {
   closeExitModal();
   stopTimer();
+  state.exitingQuiz = true;
   showHome();
+  history.back();
 }
 
 export function showResults() {
   stopTimer();
   clearSession();
   showScreen("resultsScreen");
+  history.pushState({ screen: "results" }, "", location.href);
 
   const total = state.answers.length;
   const correct = state.answers.filter((a) => a && a.correct).length;

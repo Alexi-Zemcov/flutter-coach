@@ -7,4 +7,5 @@ export const state = {
   timerInterval: null,
   timerSeconds: 0,
   pendingResumeSession: null,
+  exitingQuiz: false,
 };
