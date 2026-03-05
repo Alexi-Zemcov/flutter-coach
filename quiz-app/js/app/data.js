@@ -1,8 +1,8 @@
 import { ALL_QUESTIONS } from "../questions.js";
 
-export const TICKETS_SIZE = 20;
-export const BLITZ_SIZE = 20;
-export const BLITZ_TIME = 20 * 60;
+export const TICKETS_SIZE = 10;
+export const BLITZ_SIZE = 10;
+export const BLITZ_TIME = BLITZ_SIZE * 60;
 
 export const TICKETS = generateTickets(ALL_QUESTIONS);
 export const TOPICS = generateTopics(ALL_QUESTIONS);
