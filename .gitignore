@@ -7,6 +7,7 @@ firebase-debug.*.log
 
 # Local / IDE (user-specific paths and settings)
 .claude/settings.local.json
+/.vscode/
 
 # Dependencies
 node_modules/

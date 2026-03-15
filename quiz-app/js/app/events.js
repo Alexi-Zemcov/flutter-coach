@@ -9,6 +9,7 @@ import {
   showScreen,
 } from "./navigation.js";
 import { state } from "./state.js";
+import { cycleTheme, setTheme } from "./theme.js";
 import {
   closeExitModal,
   confirmExit,
@@ -46,6 +47,8 @@ const ACTION_HANDLERS = {
   closeExitModal,
   confirmExit,
   openExitModal,
+  setTheme: (el) => setTheme(el.dataset.theme),
+  cycleTheme,
   toggleFavorite: () => toggleCurrentFavorite(),
   startTicketQuiz: (el) => startTicketQuiz(Number(el.dataset.ticketId)),
   startTopicQuiz: (el) => startTopicQuiz(el.dataset.topicName),

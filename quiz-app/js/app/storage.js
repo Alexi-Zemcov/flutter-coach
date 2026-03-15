@@ -4,6 +4,13 @@ import { state } from "./state.js";
 const STORAGE_KEY = "flutterQuizStats";
 const FAVORITES_KEY = "flutterQuizFavorites";
 const SESSION_KEY = "flutterQuizSession";
+const THEME_KEY = "flutterQuizTheme";
+const ALLOWED_THEMES = new Set(["dark", "white", "black"]);
+const LEGACY_THEME_MAP = {
+  default: "dark",
+  "white-contrast": "white",
+  "black-contrast": "black",
+};
 
 export function getQuizStats() {
   try {
@@ -82,6 +89,31 @@ export function loadSession(ticketId) {
 
 export function clearSession() {
   localStorage.removeItem(SESSION_KEY);
+}
+
+export function getThemePreference() {
+  try {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (!savedTheme) {
+      return "dark";
+    }
+    const normalizedTheme = LEGACY_THEME_MAP[savedTheme] || savedTheme;
+    if (!ALLOWED_THEMES.has(normalizedTheme)) {
+      return "dark";
+    }
+    return normalizedTheme;
+  } catch {
+    return "dark";
+  }
+}
+
+export function saveThemePreference(theme) {
+  if (!ALLOWED_THEMES.has(theme)) {
+    return;
+  }
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {}
 }
 
 export function getErrorQuestions() {
